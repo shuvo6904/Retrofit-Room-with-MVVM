@@ -19,7 +19,7 @@ class QuoteApplication : Application() {
 
         val apiInterface = RetrofitClient.getRetrofitInstance().create(ApiInterface::class.java)
         val database = QuoteDatabase.getDatabase(applicationContext)
-        quoteRepository = QuoteRepository(apiInterface, database)
+        quoteRepository = QuoteRepository(apiInterface, database, applicationContext)
 
     }
 }

@@ -3,6 +3,7 @@ package com.example.retrofit_room_mvvm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.retrofit_room_mvvm.viewmodel.MainViewModel
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(MainViewModel::class.java)
 
         mainViewModel.quote.observe(this, Observer {
-            Log.d("SHUVO", it.results.toString())
+            //Log.d("SHUVO", it.results.toString())
+            Toast.makeText(this, it.results.size.toString(), Toast.LENGTH_LONG).show()
         })
 
     }
