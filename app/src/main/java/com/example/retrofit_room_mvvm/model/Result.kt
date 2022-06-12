@@ -3,6 +3,7 @@ package com.example.retrofit_room_mvvm.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
 @Entity(tableName = "quote")
 data class Result(
     @PrimaryKey(autoGenerate = true)
